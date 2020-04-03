@@ -1,0 +1,35 @@
+/*потом будем играться с фоном*/
+body {
+    background-color: #f5cc8d;
+    min-width: 320px;
+}
+/*блок с полями*/
+}
+.field {
+    display: inline-block;
+    width: 25%;
+    height: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #3e2820;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    padding: 10px 5px 10px 5px;
+}
+/*на потом, чтоб подстраиваться под разные экраны*/
+@media screen and (max-width: 959px) {
+
+}
+
+@media screen and (max-width: 640px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
