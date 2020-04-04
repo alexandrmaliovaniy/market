@@ -9,8 +9,8 @@ using market.Models;
 namespace market.Migrations
 {
     [DbContext(typeof(ClothesContext))]
-    [Migration("20200403000155_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20200404013021_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,11 +22,15 @@ namespace market.Migrations
 
             modelBuilder.Entity("market.Models.Clothes", b =>
                 {
-                    b.Property<long>("id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("description")
                         .HasColumnType("nvarchar(4000)");
+
+                    b.Property<string>("imageSrc")
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("material")
                         .HasColumnType("nvarchar(250)");

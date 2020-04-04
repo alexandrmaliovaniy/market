@@ -10,15 +10,17 @@ namespace market.Models
     public class Clothes
     {
         [Key]
-        public uint id { set; get; }
+        public int id { set; get; }
         [Column(TypeName = "nvarchar(250)")]
         public string name { set; get; }
         [Column(TypeName =  "nvarchar(4000)")]
         public string description { set; get; }
         [Column(TypeName = "varchar(250)")]
-        public uint price { set; get; }
+        public int price { set; get; }
         [Column(TypeName =  "nvarchar(250)")]
         public string material { set; get; }
+        [Column(TypeName = "nvarchar(250)")]
+        public string imageSrc { set; get; }
 
     }
 }

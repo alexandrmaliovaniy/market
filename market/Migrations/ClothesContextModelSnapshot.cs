@@ -20,11 +20,15 @@ namespace market.Migrations
 
             modelBuilder.Entity("market.Models.Clothes", b =>
                 {
-                    b.Property<long>("id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("description")
                         .HasColumnType("nvarchar(4000)");
+
+                    b.Property<string>("imageSrc")
+                        .HasColumnType("nvarchar(250)");
 
                     b.Property<string>("material")
                         .HasColumnType("nvarchar(250)");

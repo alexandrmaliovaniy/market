@@ -10,30 +10,37 @@ namespace market.Controllers
 {
     public class HomeController : Controller
     {
+        ClothesContext db;
+        public HomeController(ClothesContext context)
+        {
+            db = context;
+            Console.WriteLine(db);
+        }
         public IActionResult Index()
         {
-            return View();
+            return View(db.Cloth);
         }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
+        public IActionResult ClothManager()
         {
             return View();
         }
-
+        [HttpPost]
+        public async Task<IActionResult> AddItem([Bind("name,description,material,price,imageSrc")] Clothes cloth)
+        {
+            db.Cloth.Add(cloth);
+            db.SaveChanges();
+            return RedirectToAction(nameof(ClothManager));
+        }
+        public async Task<IActionResult> ShowItem(int? id)
+        {
+            var item = await db.Cloth.FindAsync(id);
+            ViewData["id"] = id;
+            ViewData["name"] = item.name;
+            ViewData["description"] = item.description;
+            ViewData["material"] = item.material;
+            ViewData["price"] = item.price;
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

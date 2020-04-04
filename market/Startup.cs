@@ -31,7 +31,6 @@ namespace market
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-
             services.AddDbContext<ClothesContext>(options =>
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DevConnection"));

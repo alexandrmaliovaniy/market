@@ -1,37 +1,31 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
-for details on configuring this project to bundle and minify static web assets. */
+﻿/*потом будем играться с фоном*/
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    background-color: #f5cc8d;
+    min-width: 320px;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.field {
+    display: inline-block;
+    width: 25%;
+    height: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #3e2820;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1.5%;
+    margin-bottom: 1.5%;
+    padding: 10px 5px 10px 5px;
+}
+/*на потом, чтоб подстраиваться под разные экраны*/
+@media screen and (max-width: 959px) {
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+@media screen and (max-width: 640px) {
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
-}
-
-/* QR code generator */
-#qrCode {
-    margin: 15px;
-}
-
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+@media screen and (max-width: 320px) {
 }

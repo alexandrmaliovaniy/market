@@ -1,0 +1,43 @@
+﻿@model  market.Models.Clothes
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes Manager</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div class="field" align="center">
+        <form asp-action="AddItem" asp-controller="home" method="post">
+            <table>
+                <tr>
+                    <td><label for="p1">Name: </label></td>
+                    <td><input type="text" name="name" id="p1" asp-for="name" /></td>
+                </tr>
+                <tr>
+                    <td><label for="p1">Description: </label></td>
+                    <td><input type="text" name="description" id="p2" asp-for="description" /></td>
+                </tr>
+                <tr>
+                    <td><label for="p1">Price: </label></td>
+                    <td><input type="text" name="price" id="p3" asp-for="price" /></td>
+                </tr>
+                <tr>
+                    <td><label for="p1">Material: </label></td>
+                    <td><input type="text" name="material" id="p4" asp-for="material" /></td>
+                </tr>
+                <tr>
+                    <td><label for="p1">imgSrc: </label></td>
+                    <td><input type="text" name="imageSrc" id="p4" asp-for="imageSrc" /></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </div>
+</body>
+</html>

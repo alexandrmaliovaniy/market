@@ -10,7 +10,7 @@ namespace market.Models
     {
         public ClothesContext(DbContextOptions<ClothesContext> options):base(options)
         {
-
+             
         }
         public DbSet<Clothes> Cloth { get; set; }
     }
